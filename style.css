@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
 }
@@ -889,6 +893,26 @@ textarea.form__item {
 }
 
 
+/* button UP */
+
+.up-button {
+    display: none;
+}
+
+.up-button.active {
+    display: block;
+    border: 2px solid #ff9b51;
+    border-radius: 50%;
+    background-color: #ffffff;
+    padding: 30px;
+    cursor: pointer;
+    bottom: 30px;
+    right: 70px;
+    position: fixed;
+    color: #ff9b51;
+    font-size: 20px;
+    font-weight: 700;
+}
 
 
 
@@ -1298,3 +1322,4 @@ textarea.form__item {
         width: 100%;
     }
 }
+
