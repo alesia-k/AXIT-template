@@ -1,5 +1,5 @@
-let mainMenuToggle = document.querySelector(".main-menu__toggle");
-let mainMenu = document.querySelector(".main-menu");
+const mainMenuToggle = document.querySelector(".main-menu__toggle");
+const mainMenu = document.querySelector(".main-menu");
 
 mainMenuToggle.addEventListener('click', function () {
     mainMenuToggle.classList.toggle("active");
@@ -7,7 +7,7 @@ mainMenuToggle.addEventListener('click', function () {
 });
 
 
-/* scroll */
+/* button "UP" */
 
 window.onload = () => {
 
@@ -43,4 +43,20 @@ window.onload = () => {
     }
 };
 
+
+/* smooth scroll to anchors */
+
+const anchors = document.querySelectorAll('a[href*="#"]');
+
+for (let anchor of anchors) {
+    anchor.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        const scrollTarget = anchor.getAttribute("href").substr(1);
+        
+        document.getElementById(scrollTarget).scrollIntoView({
+            behavior: "smooth",
+        })
+    })
+}
 
