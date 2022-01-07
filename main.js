@@ -46,6 +46,7 @@ window.onload = () => {
 
 /* smooth scroll to anchors */
 
+
 const anchors = document.querySelectorAll('a[href*="#"]');
 
 for (let anchor of anchors) {
@@ -60,3 +61,8 @@ for (let anchor of anchors) {
     })
 }
 
+const logo = document.getElementById("logo");
+
+logo.addEventListener("click", () => {
+    scrollTo(0, 0);
+})
